@@ -1,0 +1,11 @@
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\COE131L-PROJECT.exe.config
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\COE131L-PROJECT.exe
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\COE131L-PROJECT.pdb
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.MainMenu.resources
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.Properties.Resources.resources
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csproj.GenerateResource.cache
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csproj.CoreCompileInputs.cache
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.exe
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.pdb
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.ShoppingList.resources
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.Forms.PriceList.resources
