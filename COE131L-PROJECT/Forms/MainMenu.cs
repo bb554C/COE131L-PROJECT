@@ -1,12 +1,5 @@
 ﻿using COE131L_PROJECT.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COE131L_PROJECT
@@ -20,12 +13,18 @@ namespace COE131L_PROJECT
 
         private void buttonViewInventory_Click(object sender, EventArgs e)
         {
-
+            InventoryForm temp = new InventoryForm();
+            this.Hide();
+            temp.ShowDialog();
+            this.Show();
         }
 
         private void buttonDataRawMaterials_Click(object sender, EventArgs e)
         {
-
+            DataRawMats temp = new DataRawMats();
+            this.Hide();
+            temp.ShowDialog();
+            this.Show();
         }
 
         private void buttonShoppingList_Click(object sender, EventArgs e)
@@ -38,7 +37,10 @@ namespace COE131L_PROJECT
 
         private void buttonOtherExpenses_Click(object sender, EventArgs e)
         {
-
+            DataExpenses temp = new DataExpenses();
+            this.Hide();
+            temp.ShowDialog();
+            this.Show();
         }
 
         private void buttonPriceList_Click(object sender, EventArgs e)
