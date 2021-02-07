@@ -46,6 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\InputData.cs" />
+    <Compile Include="Classes\SqlConnectionClass.cs" />
+    <Compile Include="Forms\DataExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataExpenses.Designer.cs">
+      <DependentUpon>DataExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataRawMats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataRawMats.Designer.cs">
+      <DependentUpon>DataRawMats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExpenseType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExpenseType.Designer.cs">
+      <DependentUpon>ExpenseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +84,12 @@
     <Compile Include="Forms\PriceList.Designer.cs">
       <DependentUpon>PriceList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RawMats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RawMats.Designer.cs">
+      <DependentUpon>RawMats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\ShoppingList.cs">
@@ -66,11 +98,26 @@
     <Compile Include="Forms\ShoppingList.Designer.cs">
       <DependentUpon>ShoppingList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\DataExpenses.resx">
+      <DependentUpon>DataExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataRawMats.resx">
+      <DependentUpon>DataRawMats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExpenseType.resx">
+      <DependentUpon>ExpenseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PriceList.resx">
       <DependentUpon>PriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RawMats.resx">
+      <DependentUpon>RawMats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShoppingList.resx">
       <DependentUpon>ShoppingList.cs</DependentUpon>
@@ -97,9 +144,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IMAGE\Bramps Logo Transparent.png" />
     <Content Include="IMAGE\BrampsLogo.ico" />
