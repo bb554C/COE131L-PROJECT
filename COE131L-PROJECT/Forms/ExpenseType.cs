@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using COE131L_PROJECT.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace COE131L_PROJECT.Forms
@@ -19,7 +13,11 @@ namespace COE131L_PROJECT.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(textBoxExpenseType.TextLength != 0)
+            {
+                SQLiteExpensesClass.InsertExpenseType(textBoxExpenseType.Text.ToString());
+                this.Close();
+            }
         }
     }
 }

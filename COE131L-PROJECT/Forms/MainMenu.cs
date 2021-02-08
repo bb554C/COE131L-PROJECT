@@ -1,4 +1,5 @@
-﻿using COE131L_PROJECT.Forms;
+﻿using COE131L_PROJECT.Classes;
+using COE131L_PROJECT.Forms;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +10,7 @@ namespace COE131L_PROJECT
         public MainMenu()
         {
             InitializeComponent();
+            SQLiteConnectionClass.DatabaseCheck();
         }
 
         private void buttonViewInventory_Click(object sender, EventArgs e)
