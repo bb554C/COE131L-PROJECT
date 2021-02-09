@@ -14,3 +14,15 @@ C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.Forms.DataRawMats.resources
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.Forms.ExpenseType.resources
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L_PROJECT.Forms.RawMats.resources
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\x86\sqlite3.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\x64\sqlite3.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\EntityFramework.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\EntityFramework.xml
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.xml
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csprojAssemblyReference.cache
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csproj.CopyComplete

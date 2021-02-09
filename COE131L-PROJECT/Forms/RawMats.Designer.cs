@@ -45,12 +45,13 @@ namespace COE131L_PROJECT.Forms
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "SAVE";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 16);
+            this.label1.Location = new System.Drawing.Point(56, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 4;

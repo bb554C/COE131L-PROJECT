@@ -37,10 +37,11 @@ namespace COE131L_PROJECT.Forms
             this.numericUpDownPrice = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownQty = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace COE131L_PROJECT.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(7, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 25);
             this.label1.TabIndex = 1;
@@ -87,6 +88,7 @@ namespace COE131L_PROJECT.Forms
             // 
             // numericUpDownPrice
             // 
+            this.numericUpDownPrice.DecimalPlaces = 2;
             this.numericUpDownPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownPrice.Location = new System.Drawing.Point(163, 89);
             this.numericUpDownPrice.Maximum = new decimal(new int[] {
@@ -119,22 +121,25 @@ namespace COE131L_PROJECT.Forms
             this.label3.TabIndex = 7;
             this.label3.Text = "Quantity:";
             // 
-            // numericUpDown1
+            // numericUpDownQty
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(415, 89);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownQty.Location = new System.Drawing.Point(415, 89);
+            this.numericUpDownQty.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownQty.Name = "numericUpDownQty";
+            this.numericUpDownQty.Size = new System.Drawing.Size(120, 30);
+            this.numericUpDownQty.TabIndex = 6;
+            this.numericUpDownQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 131);
             this.dataGridView1.Name = "dataGridView1";
@@ -143,15 +148,28 @@ namespace COE131L_PROJECT.Forms
             this.dataGridView1.Size = new System.Drawing.Size(758, 410);
             this.dataGridView1.TabIndex = 8;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.BackColor = System.Drawing.Color.LimeGreen;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(598, 79);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(100, 40);
+            this.buttonSave.TabIndex = 9;
+            this.buttonSave.Text = "SAVE";
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // DataExpenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownQty);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numericUpDownPrice);
             this.Controls.Add(this.dateTimePicker);
@@ -166,7 +184,7 @@ namespace COE131L_PROJECT.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataExpenses";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,7 +200,8 @@ namespace COE131L_PROJECT.Forms
         private System.Windows.Forms.NumericUpDown numericUpDownPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownQty;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
