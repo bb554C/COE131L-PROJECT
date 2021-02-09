@@ -69,6 +69,7 @@
     <Compile Include="Classes\InputData.cs" />
     <Compile Include="Classes\SQLiteConnectionClass.cs" />
     <Compile Include="Classes\SQLiteExpensesClass.cs" />
+    <Compile Include="Classes\SQLiteRawMatsClass.cs" />
     <Compile Include="Forms\DataExpenses.cs">
       <SubType>Form</SubType>
     </Compile>

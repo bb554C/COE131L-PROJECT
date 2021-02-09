@@ -4,49 +4,49 @@ using System.Data.SQLite;
 
 namespace COE131L_PROJECT.Classes
 {
-    class SQLiteExpensesClass
+    class SQLiteRawMatsClass
     {
-        private const string SQLCreateTableDataExpense 
-            = "CREATE TABLE DataExpenseTable"
-            + "(DataExpenseID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,"
-            + "DataExpenseTypeID INTEGER NOT NULL,"
+        private const string SQLCreateTableDataRawMats
+            = "CREATE TABLE DataRawMatsTable"
+            + "(DataRawMatsID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,"
+            + "DataMenuItemID INTEGER NOT NULL,"
             + "Date TEXT NOT NULL,"
             + "Price NUMERIC NOT NULL,"
             + "Quantity INTEGER NOT NULL);";
-        private const string SQLCreateTableExpenseType 
-            = "CREATE TABLE ExpenseTypeTable"
-            + "(ExpenseTypeID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,"
-            + "ExpenseTypeName TEXT NOT NULL);";
+        private const string SQLCreateTableMenuItem
+            = "CREATE TABLE MenuItemTable"
+            + "(MenuItemID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,"
+            + "MenuItemName TEXT NOT NULL);";
         public static void CreateTable()
         {
-            SQLiteConnectionClass.SQLExecuteCommand(SQLCreateTableDataExpense);
-            SQLiteConnectionClass.SQLExecuteCommand(SQLCreateTableExpenseType);
+            SQLiteConnectionClass.SQLExecuteCommand(SQLCreateTableDataRawMats);
+            SQLiteConnectionClass.SQLExecuteCommand(SQLCreateTableMenuItem);
         }
-        public static void InsertExpenseType(string TempExpenseTypeName)
+        public static void InsertMenuItem(string TempMenuItemName)
         {
             string SQLInsertExpenseType
-            = "INSERT INTO ExpenseTypeTable"
-            + " (ExpenseTypeName)"
-            + " VALUES ( '" + TempExpenseTypeName + "' );";
+            = "INSERT INTO MenuItemTable"
+            + " (MenuItemName)"
+            + " VALUES ( '" + TempMenuItemName + "' );";
             SQLiteConnectionClass.SQLExecuteCommand(SQLInsertExpenseType);
         }
-        public static void InsertDataExpense(string TempExpenseTypeName, string tempDate, decimal tempPrice, int tempQty )
+        public static void InsertDataRawMats(string TempDataRawMatsName, string tempDate, decimal tempPrice, int tempQty)
         {
-            string SQLInsertExpenseType
-            = "INSERT INTO DataExpenseTable"
-            + " (DataExpenseTypeID, Date, Price, Quantity)"
-            + " VALUES ( '" 
-            + GetExpenseTypeID(TempExpenseTypeName) + "', '"
+            string SQLInsertDataRawMats
+            = "INSERT INTO DataRawMatsTable"
+            + " (DataMenuItemID, Date, Price, Quantity)"
+            + " VALUES ( '"
+            + GetMenuItemID(TempDataRawMatsName) + "', '"
             + tempDate + "', '"
             + tempPrice + "', '"
             + tempQty
             + "');";
-            SQLiteConnectionClass.SQLExecuteCommand(SQLInsertExpenseType);
+            SQLiteConnectionClass.SQLExecuteCommand(SQLInsertDataRawMats);
         }
-        public static int CountExpenseTypeTable()
+        public static int CountMenuItemTable()
         {
             int x = 0;
-            string SQLCountExpenseType = "SELECT COUNT(*) ExpenseTypeTable;";
+            string SQLCountExpenseType = "SELECT COUNT(*) MenuItemTable;";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
@@ -58,10 +58,10 @@ namespace COE131L_PROJECT.Classes
             }
             return x;
         }
-        public static int CountDataExpenseTable()
+        public static int CountRawMatsTable()
         {
             int x = 0;
-            string SQLCountExpenseType = "SELECT COUNT(*) DataExpenseTable;";
+            string SQLCountExpenseType = "SELECT COUNT(*) DataRawMatsTable;";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
@@ -73,11 +73,11 @@ namespace COE131L_PROJECT.Classes
             }
             return x;
         }
-        private static int GetExpenseTypeID(string tempName)
+        private static int GetMenuItemID(string tempName)
         {
             int tempID = 0;
             string SQLSelectExpenseType
-            = "SELECT ExpenseTypeID FROM ExpenseTypeTable WHERE ExpenseTypeName = '" + tempName + "';";
+            = "SELECT MenuItemID FROM MenuItemTable WHERE MenuItemName = '" + tempName + "';";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
@@ -87,13 +87,13 @@ namespace COE131L_PROJECT.Classes
             {
                 tempID = SQLREADER.GetInt32(0);
             }
-            return tempID; 
+            return tempID;
         }
-        public static List<string> GetExpenseTypeList()
+        public static List<string> GetMenuItemList()
         {
             List<string> expenseTypeList = new List<string>();
             string SQLSelectExpenseType
-            = "SELECT ExpenseTypeName FROM ExpenseTypeTable;";
+            = "SELECT MenuItemName FROM MenuItemTable;";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
@@ -107,14 +107,14 @@ namespace COE131L_PROJECT.Classes
             SQLiteConnectionClass.CloseSQLConnection(SQLConnection);
             return expenseTypeList;
         }
-        public static DataSet GetDataExpenses()
+        public static DataSet GetDataRawMats()
         {
             DataSet ds = new DataSet();
             SQLiteDataAdapter adapter;
             string SQLSelectExpenseType
-            = "SELECT DataExpenseID, Date ,ExpenseTypeName, Price, Quantity " 
-            + "FROM DataExpenseTable LEFT JOIN ExpenseTypeTable "
-            + "ON DataExpenseTable.DataExpenseTypeID = ExpenseTypeTable.ExpenseTypeID;";
+            = "SELECT DataRawMatsID, Date ,MenuItemName, Price, Quantity "
+            + "FROM DataRawMatsTable LEFT JOIN MenuItemTable "
+            + "ON DataRawMatsTable.DataMenuItemID = MenuItemTable.MenuItemID;";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
