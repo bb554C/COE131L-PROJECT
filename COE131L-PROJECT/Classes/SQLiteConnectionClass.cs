@@ -18,6 +18,7 @@ namespace COE131L_PROJECT.Classes
                 SQLiteConnection.CreateFile(@"Database\COE131LDatabase.db");
                 SQLiteExpensesClass.CreateTable();
                 SQLiteRawMatsClass.CreateTable();
+                SQLiteInventoryClass.CreateTable();
             }
         }
         public static void SQLExecuteCommand(string SQLCommand)

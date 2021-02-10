@@ -73,7 +73,7 @@ namespace COE131L_PROJECT.Classes
             }
             return x;
         }
-        private static int GetMenuItemID(string tempName)
+        public static int GetMenuItemID(string tempName)
         {
             int tempID = 0;
             string SQLSelectExpenseType
@@ -112,7 +112,7 @@ namespace COE131L_PROJECT.Classes
             DataSet ds = new DataSet();
             SQLiteDataAdapter adapter;
             string SQLSelectExpenseType
-            = "SELECT DataRawMatsID, Date ,MenuItemName, Price, Quantity "
+            = "SELECT DataRawMatsID, Date ,MenuItemName AS 'Item Name', Price, Quantity "
             + "FROM DataRawMatsTable LEFT JOIN MenuItemTable "
             + "ON DataRawMatsTable.DataMenuItemID = MenuItemTable.MenuItemID;";
             SQLiteCommand SQLCMD;

@@ -14,6 +14,7 @@ namespace COE131L_PROJECT.Forms
         private void buttonSave_Click(object sender, EventArgs e)
         {
             SQLiteRawMatsClass.InsertMenuItem(textBoxExpenseType.Text.ToString());
+            SQLiteInventoryClass.InsertMenuItem(SQLiteRawMatsClass.GetMenuItemID(textBoxExpenseType.Text.ToString()), DateTime.Today.ToString("MM/dd/yyyy"));
             this.Close();
         }
     }
