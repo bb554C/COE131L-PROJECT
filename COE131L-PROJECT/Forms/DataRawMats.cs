@@ -1,12 +1,5 @@
 ﻿using COE131L_PROJECT.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COE131L_PROJECT.Forms
@@ -16,9 +9,11 @@ namespace COE131L_PROJECT.Forms
         public DataRawMats()
         {
             InitializeComponent();
+            reloadPage();
         }
         private void reloadPage()
         {
+            dateTimePicker.MaxDate = DateTime.Today;
             if (SQLiteRawMatsClass.CountMenuItemTable() != 0)
             {
                 comboBoxType.DataSource = null;
@@ -29,6 +24,9 @@ namespace COE131L_PROJECT.Forms
             {
                 dataGridView1.DataSource = SQLiteRawMatsClass.GetDataRawMats().Tables[0];
             }
+            comboBoxType.SelectedIndex = 0;
+            numericUpDownPrice.Value = 0;
+            numericUpDownQty.Value = 0;
         }
         private void buttonPlus_Click(object sender, EventArgs e)
         {
@@ -40,8 +38,9 @@ namespace COE131L_PROJECT.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string tempDate = dateTimePicker.Value.ToString();
+            string tempDate = dateTimePicker.Value.ToString("MM/dd/yyyy");
             SQLiteRawMatsClass.InsertDataRawMats(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+            SQLiteInventoryClass.updateStock(Convert.ToInt32(numericUpDownQty.Value), comboBoxType.SelectedValue.ToString());
             reloadPage();
         }
     }
