@@ -70,6 +70,7 @@
     <Compile Include="Classes\SQLiteConnectionClass.cs" />
     <Compile Include="Classes\SQLiteExpensesClass.cs" />
     <Compile Include="Classes\SQLiteInventoryClass.cs" />
+    <Compile Include="Classes\SQLitePriceListClass.cs" />
     <Compile Include="Classes\SQLiteRawMatsClass.cs" />
     <Compile Include="Classes\SQLiteShoppingClass.cs" />
     <Compile Include="Forms\DataExpenses.cs">

@@ -17,8 +17,9 @@ namespace COE131L_PROJECT.Classes
             DataTable table = new DataTable();
             table.Columns.Add("Item Name");
             table.Columns.Add("Suggested Quantity");
-            for (int i = 1; i <= SQLiteRawMatsClass.CountMenuItemTable(); i++)
+            for (int x = 0; x <= SQLiteRawMatsClass.CountMenuItemTable(); x++)
             {
+                int i = x + 1;
                 table.Rows.Add(SQLiteRawMatsClass.GetMenuItemName(i),getAveQty(i).ToString("0.00"));
             }
             ds.Tables.Add(table);
