@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COE131L_PROJECT.Classes;
 
 namespace COE131L_PROJECT
 {
@@ -15,8 +16,13 @@ namespace COE131L_PROJECT
         public ShoppingList()
         {
             InitializeComponent();
+            reloadPage();
         }
+        public void reloadPage()
+        {
+            dataGridViewShoppingList.DataSource = SQLiteShoppingClass.getData().Tables[0];
 
+        }
         private void buttonReturn_Click(object sender, EventArgs e)
         {
             this.Close();

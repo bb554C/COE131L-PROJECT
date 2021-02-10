@@ -89,6 +89,22 @@ namespace COE131L_PROJECT.Classes
             }
             return tempID;
         }
+        public static string GetMenuItemName(int tempID)
+        {
+            string tempName = "";
+            string SQLSelectExpenseType
+            = "SELECT MenuItemName FROM MenuItemTable WHERE MenuItemID = '" + tempID + "';";
+            SQLiteCommand SQLCMD;
+            SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
+            SQLCMD = SQLConnection.CreateCommand();
+            SQLCMD.CommandText = SQLSelectExpenseType;
+            SQLiteDataReader SQLREADER = SQLCMD.ExecuteReader();
+            while (SQLREADER.Read())
+            {
+                tempName = SQLREADER.GetString(0);
+            }
+            return tempName;
+        }
         public static List<string> GetMenuItemList()
         {
             List<string> expenseTypeList = new List<string>();
