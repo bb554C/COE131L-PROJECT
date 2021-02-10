@@ -1,5 +1,12 @@
 ﻿using COE131L_PROJECT.Classes;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COE131L_PROJECT.Forms
@@ -13,7 +20,6 @@ namespace COE131L_PROJECT.Forms
         }
         private void reloadPage()
         {
-            dateTimePicker.MaxDate = DateTime.Today;
             if (SQLiteExpensesClass.CountDataExpenseTable() != 0)
             {
                 comboBoxType.DataSource = null;
@@ -24,9 +30,6 @@ namespace COE131L_PROJECT.Forms
             {
                 dataGridView1.DataSource = SQLiteExpensesClass.GetDataExpenses().Tables[0];
             }
-            comboBoxType.SelectedIndex = 0;
-            numericUpDownPrice.Value = 0;
-            numericUpDownQty.Value = 0;
         }
         private void buttonPlus_Click(object sender, EventArgs e)
         {
@@ -38,9 +41,24 @@ namespace COE131L_PROJECT.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string tempDate = dateTimePicker.Value.ToString("MM/dd/yyyy");
-            SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
-            reloadPage();
+            if (string.IsNullOrEmpty(comboBoxType.Text))
+            {
+                MessageBox.Show("One or more fields are empty");
+            }
+            else if(numericUpDownPrice.Value == 0)
+            {
+                MessageBox.Show("Please enter Price");
+            }
+            else if(numericUpDownQty.Value == 0)
+            {
+                MessageBox.Show("Please Enter Quantity");
+            }
+            else
+            {
+                string tempDate = dateTimePicker.Value.ToString();
+                SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+                reloadPage();
+            }
         }
     }
 }
