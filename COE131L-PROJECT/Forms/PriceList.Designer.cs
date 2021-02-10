@@ -30,18 +30,10 @@ namespace COE131L_PROJECT.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PriceList));
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.dataGridViewPriceList = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPriceList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 505);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(627, 30);
-            this.progressBar1.TabIndex = 5;
             // 
             // buttonReturn
             // 
@@ -74,7 +66,6 @@ namespace COE131L_PROJECT.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.dataGridViewPriceList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -90,8 +81,6 @@ namespace COE131L_PROJECT.Forms
         }
 
         #endregion
-
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button buttonReturn;
         private System.Windows.Forms.DataGridView dataGridViewPriceList;
     }

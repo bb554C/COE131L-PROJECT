@@ -32,7 +32,6 @@ namespace COE131L_PROJECT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShoppingList));
             this.dataGridViewShoppingList = new System.Windows.Forms.DataGridView();
             this.buttonReturn = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShoppingList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,20 +60,12 @@ namespace COE131L_PROJECT
             this.buttonReturn.UseVisualStyleBackColor = false;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 500);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(627, 30);
-            this.progressBar1.TabIndex = 2;
-            // 
             // ShoppingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.dataGridViewShoppingList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -92,6 +83,5 @@ namespace COE131L_PROJECT
 
         private System.Windows.Forms.DataGridView dataGridViewShoppingList;
         private System.Windows.Forms.Button buttonReturn;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

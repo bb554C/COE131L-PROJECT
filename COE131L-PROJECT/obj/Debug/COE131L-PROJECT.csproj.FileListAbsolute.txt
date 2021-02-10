@@ -25,3 +25,4 @@ C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\Entity
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.xml
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csproj.CopyComplete
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csprojAssemblyReference.cache
