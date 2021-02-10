@@ -41,9 +41,24 @@ namespace COE131L_PROJECT.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string tempDate = dateTimePicker.Value.ToString();
-            SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
-            reloadPage();
+            if (string.IsNullOrEmpty(comboBoxType.Text))
+            {
+                MessageBox.Show("One or more fields are empty");
+            }
+            else if(numericUpDownPrice.Value == 0)
+            {
+                MessageBox.Show("Please enter Price");
+            }
+            else if(numericUpDownQty.Value == 0)
+            {
+                MessageBox.Show("Please Enter Quantity");
+            }
+            else
+            {
+                string tempDate = dateTimePicker.Value.ToString();
+                SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+                reloadPage();
+            }
         }
     }
 }
