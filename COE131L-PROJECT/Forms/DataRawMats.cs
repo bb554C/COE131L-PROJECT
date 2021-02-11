@@ -42,6 +42,26 @@ namespace COE131L_PROJECT.Forms
             SQLiteRawMatsClass.InsertDataRawMats(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
             SQLiteInventoryClass.updateStock(Convert.ToInt32(numericUpDownQty.Value), comboBoxType.SelectedValue.ToString());
             reloadPage();
+            
+             if (string.IsNullOrEmpty(comboBoxType.Text))
+            {
+                MessageBox.Show("Please enter a value in all fields");
+            }
+            else if(numericUpDownPrice.Value == 0)
+            {
+                MessageBox.Show("Please enter the price");
+            }
+            else if(numericUpDownQty.Value == 0)
+            {
+                MessageBox.Show("Please enter the quantity");
+            }
+            else
+            {
+                string tempDate = dateTimePicker.Value.ToString();
+                SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+                reloadPage();
+            }
+        
         }
     }
 }
