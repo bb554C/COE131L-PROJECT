@@ -26,3 +26,7 @@ C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\Entity
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\System.Data.SQLite.xml
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csproj.CopyComplete
 C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.csprojAssemblyReference.cache
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\COE131L-PROJECT.exe.manifest
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\bin\Debug\COE131L-PROJECT.application
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.exe.manifest
+C:\Users\BAIRD\Documents\GitHub\COE131L-PROJECT\COE131L-PROJECT\obj\Debug\COE131L-PROJECT.application

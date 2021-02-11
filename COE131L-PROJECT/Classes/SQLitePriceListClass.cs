@@ -25,7 +25,7 @@ namespace COE131L_PROJECT.Classes
             DataTable table = new DataTable();
             table.Columns.Add("Item Name");
             table.Columns.Add("Suggested Price");
-            for (int x = 0; x <= SQLiteRawMatsClass.CountMenuItemTable(); x++)
+            for (int x = 0; x < SQLiteRawMatsClass.CountMenuItemTable(); x++)
             {
                 int i = x + 1;
                 table.Rows.Add(SQLiteRawMatsClass.GetMenuItemName(i), computeSuggestedPrice(getAvePrice(i), getSumSalesQuantity(i),getSumAllQuantity(),getSumExpenses(),percent).ToString("0.00"));

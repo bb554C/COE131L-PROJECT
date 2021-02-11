@@ -55,7 +55,7 @@ namespace COE131L_PROJECT.Forms
             }
             else
             {
-                string tempDate = dateTimePicker.Value.ToString();
+                string tempDate = dateTimePicker.Value.ToString("MM/dd/yyyy");
                 SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
                 reloadPage();
             }

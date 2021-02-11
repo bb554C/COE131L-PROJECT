@@ -38,11 +38,6 @@ namespace COE131L_PROJECT.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string tempDate = dateTimePicker.Value.ToString("MM/dd/yyyy");
-            SQLiteRawMatsClass.InsertDataRawMats(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
-            SQLiteInventoryClass.updateStock(Convert.ToInt32(numericUpDownQty.Value), comboBoxType.SelectedValue.ToString());
-            reloadPage();
-            
              if (string.IsNullOrEmpty(comboBoxType.Text))
             {
                 MessageBox.Show("Please enter a value in all fields");
@@ -57,8 +52,9 @@ namespace COE131L_PROJECT.Forms
             }
             else
             {
-                string tempDate = dateTimePicker.Value.ToString();
-                SQLiteExpensesClass.InsertDataExpense(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+                string tempDate = dateTimePicker.Value.ToString("MM/dd/yyyy");
+                SQLiteRawMatsClass.InsertDataRawMats(comboBoxType.SelectedValue.ToString(), tempDate, Convert.ToDecimal(numericUpDownPrice.Value), Convert.ToInt32(numericUpDownQty.Value));
+                SQLiteInventoryClass.updateStock(Convert.ToInt32(numericUpDownQty.Value), comboBoxType.SelectedValue.ToString());
                 reloadPage();
             }
         

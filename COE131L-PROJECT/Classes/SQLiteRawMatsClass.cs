@@ -46,7 +46,7 @@ namespace COE131L_PROJECT.Classes
         public static int CountMenuItemTable()
         {
             int x = 0;
-            string SQLCountExpenseType = "SELECT COUNT(*) MenuItemTable;";
+            string SQLCountExpenseType = "SELECT COUNT(*) FROM MenuItemTable;;";
             SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = SQLiteConnectionClass.OpenSQLConnection();
             SQLCMD = SQLConnection.CreateCommand();
